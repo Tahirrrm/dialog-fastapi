@@ -6,18 +6,17 @@
     <title>Document</title>
 </head>
 <body>
-    <p id="status">Проверяем backend...</p>
+    <p id="status"> Проверяем backend... </p>
     <script type="text/javascript" src="js/api.js"></script>
     <script type="text/javascript">
         api("/health", {}, false)
         .then(() => {
             const status = document.getElementById("status");
-            status.textContent = "Backend подключен";
+            status.textContent = "backend подключен"
         })
         .catch((error) => {
             status.textContent = error.message;
         })
-        
     </script>
 </body>
 </html>

@@ -1,7 +1,9 @@
 __pycache__/
 .venv
-
 backend/__pycache__
 backend/app/__pycache__
-
 .env
+
+venv
+dialog.db
+backend/data/dialog.db
