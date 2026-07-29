@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 
 DEFAULT_SECRET  ="development-secret-development-secret-development-secret-development-secret-development-secret"
 
-@dataclass(frozen=True, slots=True)
+@dataclass(frozen=True)
 class Settings:
     app_name: str
     frontend_url: str
