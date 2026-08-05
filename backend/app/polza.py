@@ -18,7 +18,7 @@ class PolzaClient:
         return { "Authorization": f"Bearer {settings.polza_api_key}"}
     
     async def list_models(self) -> list[dict[str,str]]:
-        self.response = await self._request("GET", "/models")
+        response = await self._request("GET", "/models")
         models = []
         for item in self._json(response).get("data",[]):
              if not isinstance(item,dict) or not self._is_chat_model(item):
